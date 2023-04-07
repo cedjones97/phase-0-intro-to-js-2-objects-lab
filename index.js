@@ -273,3 +273,84 @@ function updateEmployeeWithKeyAndValue(employee, key, value) {
     delete employee.name
     return employee
  }
+
+ 
+// let myArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+
+// let d = 0;
+
+// while (d < myArray.length) {
+//   console.log(myArray[d++]);
+// }
+
+// const myArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+
+// for (const element of myArray) {
+//   console.log(element);
+// }
+
+// for (const char of 'Hello, world!') {
+//   console.log(char);
+// }
+
+// const address = {
+//   street1: '11 Broadway',
+//   street2: '2nd Floor',
+//   city: 'New York',
+//   state: 'NY',
+//   zipCode: '10004',
+// };
+
+// for (const key in address) {
+//   console.log(key);
+// }
+// for (const key in address) {
+//   console.log(address[key]);//accesses values
+// }
+
+// Use a for...in statement whenever you want to 
+// enumerate the properties of an object.
+
+
+
+const userInfo = {
+  firstName: "Avi",
+  lastName: "Flombaum",
+  company: {
+    name: "Flatbook Labs",
+    jobTitle: "Developer Apprentice",
+  }, //**to access evrything above this line, we can use dot notation 'userInfo.firstName and so on.
+  // ** TO ACCESS EVERYTHING BELOW THIS LINE, USE BRACKET NOTATION BECAUSE IT'S IN AN ARRAY
+  //** SO userInfo.friends[0].firstName;*/
+  friends: [
+    {
+      firstName: "Nancy",
+      lastName: "Burgess",
+      company: {
+        name: "Flatbook Labs",
+        jobTitle: "Developer Apprentice",
+      },
+    },
+    {
+      firstName: "Corinna",
+      lastName: "Jackson",
+      company: {
+        name: "Flatbook Labs",
+        jobTitle: "Lead Developer",
+      },
+    },
+  ],
+  projects: [
+    {
+      title: "Flatbook",
+      description:
+        "The premier Flatiron School-based social network in the world.",
+    },
+    {
+      title: "Scuber",
+      description:
+        "A burgeoning startup helping busy parents transport their children to and from all of their activities on scooters.",
+    },
+  ],
+};  
+console.log(userInfo.friends[0].company)
